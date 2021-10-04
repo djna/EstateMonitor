@@ -1,0 +1,56 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Getting Started: Serving Web Content</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="paho-mqtt.js"></script>
+
+
+</head>
+<body>
+<H2 th:text="'Monitoring, ' + ${property} + ' ' + ${location} " />
+<input id="topic" type="text"  name="topic"  th:value="${topic}" />
+<p id="Timestamp">No Updates</p>
+<p id="Temperature">Unknown</p>
+
+</body>
+<script src="monitor.js"></script>
+<script>
+    $(document).ready(function(){
+         console.log("Subscribing");
+
+         // subscribe, requesting that message be delivered to function below
+         let topic = $('#topic').val();
+         console.log("Subscribe to " + topic);
+         subscribeHomeMonitor(topic, processMonitorMessage);
+    });
+
+    // Exmple message processor
+    function processMonitorMessage(message){
+         console.log("processMonitorMessage:"+message.payloadString);
+         let telemetry = JSON.parse(message.payloadString);
+         $('#Timestamp').text( getFormattedDate(telemetry.date));
+         $('#Temperature').text(telemetry.temperature);
+    }
+
+    // Date formatter
+    function getFormattedDate(dateToFormat) {
+
+        let formatter = Intl.DateTimeFormat(
+              "default", // a locale name; "default" chooses automatically
+              {
+                 weekday: "short",
+                 year: "numeric",
+                 month: "short",
+                 day: "numeric",
+                 hour: "numeric",
+                 minute: "numeric"
+                 }
+        );
+        return formatter.format(dateToFormat);
+    }
+
+</script>
+</html>
