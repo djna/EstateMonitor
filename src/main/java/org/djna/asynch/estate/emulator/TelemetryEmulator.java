@@ -11,7 +11,7 @@ import java.text.MessageFormat;
 import java.util.concurrent.TimeUnit;
 
 // Emulates Telemetry from multiple devices.
-// Starts a thread per emualted device, each publishing to a separate topic
+// Starts a thread per emulated device, each publishing to a separate topic
 // and each publishing at a specified rate. Cycles through a range of values.
 public class TelemetryEmulator {
     private static final Logger LOGGER = Logger.getLogger(TelemetryEmulator.class);
@@ -21,7 +21,7 @@ public class TelemetryEmulator {
         // verify that logging is correctly configured in logback.xml
         LOGGER.error("Test Error");
         LOGGER.info("Starting");
-        // usually don't enable to see this, debug from libraries is versbose
+        // usually don't enable to see this, debug from libraries is verbose
         LOGGER.debug("debug message");
 
         // example devices
@@ -40,14 +40,14 @@ public class TelemetryEmulator {
     public static Runnable makeDevice(String property, String location, final int frequencySeconds) {
         return new Runnable() {
             // each device establishes its own connection
-            // as an enhancement we could start and stop them indepdently
+            // as an enhancement we could start and stop them independently
             private ActiveMQConnectionFactory connectionFactory;
             private Connection connection;
             private Session session;
             private Destination destination;
             private MessageProducer producer;
 
-            // currently we just run forever, but this is our shutdown flag
+            // currently, we just run forever, but this is our shutdown flag
             private boolean stopping = false;
 
             @Override
@@ -59,7 +59,7 @@ public class TelemetryEmulator {
                     connection.start();
                     session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
 
-                    // in ActiceMQ this will create a topic if it doesn't exist
+                    // in ActiveMQ this will create a topic if it doesn't exist
                     String topic = MessageFormat.format(
                             "{0}.{1}.{2}", baseTopic, property, location);
                     destination = session.createTopic(topic);

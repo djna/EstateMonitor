@@ -29,4 +29,19 @@ public class HomeMonitorController {
         model.addAttribute("topic", "home/thermostats/" + property + "/" + location);
         return "monitor";
     }
+
+    @GetMapping("/login")
+    public String login() {
+        return "login";
+    }
+
+    @GetMapping("/authenticate")
+    public String authenticate(
+        @RequestParam(name="username", required=true) String name,
+        @RequestParam (name="password", required=true) String password,
+        Model model) {
+        System.out.println(name);
+        System.out.println(password);
+        return "estateowner";
+    }
 }
