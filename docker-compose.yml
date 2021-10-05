@@ -3,11 +3,20 @@ services:
   activemq:
     image: local_activemq
     ports:
-      - "61616:61616"
       - "8161:8161"
-      - "61614:61614"
-      - "1883:1883"
-  emulator:
+  emulator-one:
     image: estatemonitor
     depends_on:
       - activemq
+    environment:
+      - PROPERTY=101
+      - LOCATION=Hall
+      - FREQUENCY=10
+  emulator-two:
+    image: estatemonitor
+    depends_on:
+      - activemq
+    environment:
+      - PROPERTY=42
+      - LOCATION=Entrance
+      - FREQUENCY=5
