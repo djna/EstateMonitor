@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  activemq:
+    image: local_activemq
+    ports:
+      - "61616:61616"
+      - "8161:8161"
+      - "61614:61614"
+      - "1883:1883"
+  emulator:
+    image: estatemonitor
+    depends_on:
+      - activemq

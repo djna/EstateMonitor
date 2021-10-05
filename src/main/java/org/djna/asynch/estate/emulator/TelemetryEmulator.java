@@ -54,7 +54,7 @@ public class TelemetryEmulator {
             public void run() {
                 try {
                    connectionFactory
-                            = new ActiveMQConnectionFactory("tcp://localhost:61616");
+                            = new ActiveMQConnectionFactory("tcp://activemq:61616");
                     Connection connection = connectionFactory.createConnection();
                     connection.start();
                     session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
