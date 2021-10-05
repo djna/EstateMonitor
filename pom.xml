@@ -25,19 +25,6 @@
             <artifactId>activemq-client</artifactId>
             <version>5.16.3</version>
         </dependency>
-        <!-- https://mvnrepository.com/artifact/com.google.code.gson/gson -->
-        <dependency>
-            <groupId>com.google.code.gson</groupId>
-            <artifactId>gson</artifactId>
-            <version>2.8.8</version>
-        </dependency>
-
-
-        <dependency>
-            <groupId>org.glassfish.jersey.media</groupId>
-            <artifactId>jersey-media-json-jackson</artifactId>
-            <version>2.32</version>
-        </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-thymeleaf</artifactId>
@@ -72,23 +59,10 @@
             <version>1.7.25</version>
         </dependency>
         <dependency>
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-databind</artifactId>
-            <version>2.12.4</version>
-        </dependency>
-        <dependency>
-<<<<<<< HEAD
             <groupId>org.springframework</groupId>
             <artifactId>spring-context</artifactId>
             <version>5.3.9</version>
-=======
-            <groupId>com.fasterxml.jackson.core</groupId>
-            <artifactId>jackson-core</artifactId>
-            <version>2.11.0</version>
->>>>>>> 4efe0dce3d14f7bf0b0aa2e93ac88dc4a84b85ae
         </dependency>
-
-
     </dependencies>
     <build>
         <plugins>
@@ -102,6 +76,22 @@
                     </systemPropertyVariables>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <fork>true</fork>
+                    <mainClass>org.djna.asynch.estate.webapp.HomeMonitorApplication</mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
         </plugins>
     </build>
 
