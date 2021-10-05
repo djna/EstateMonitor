@@ -5,18 +5,40 @@ services:
     ports:
       - "8161:8161"
   emulator-one:
-    image: estatemonitor
+    build:
+      context: .
+      target: thermostat
     depends_on:
       - activemq
+      - javaserver
     environment:
       - PROPERTY=101
       - LOCATION=Hall
       - FREQUENCY=10
   emulator-two:
-    image: estatemonitor
+    build:
+      context: .
+      target: thermostat
     depends_on:
       - activemq
+      - javaserver
     environment:
       - PROPERTY=42
       - LOCATION=Entrance
       - FREQUENCY=5
+  webapp:
+    ports:
+      - "8080:80"
+    build:
+      context: .
+      target: webapp
+    depends_on:
+      - activemq
+  javaserver:
+    ports:
+      - "8085:8085"
+    build:
+      context: .
+      target: server
+    depends_on:
+      - activemq
