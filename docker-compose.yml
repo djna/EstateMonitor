@@ -1,0 +1,22 @@
+version: "3.9"
+services:
+  activemq:
+    image: local_activemq
+    ports:
+      - "8161:8161"
+  emulator-one:
+    image: estatemonitor
+    depends_on:
+      - activemq
+    environment:
+      - PROPERTY=101
+      - LOCATION=Hall
+      - FREQUENCY=10
+  emulator-two:
+    image: estatemonitor
+    depends_on:
+      - activemq
+    environment:
+      - PROPERTY=42
+      - LOCATION=Entrance
+      - FREQUENCY=5

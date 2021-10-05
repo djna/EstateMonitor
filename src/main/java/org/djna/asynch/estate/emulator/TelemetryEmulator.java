@@ -25,7 +25,8 @@ public class TelemetryEmulator {
         LOGGER.debug("debug message");
 
         // example devices
-        startWork(makeDevice("101","hall", 10), false);
+        EmulatorParameters parameters = new EmulatorParameters();
+        startWork(makeDevice(parameters), false);
         //startWork(makeDevice("101","basement", 25), false);
     }
 
@@ -37,7 +38,7 @@ public class TelemetryEmulator {
     }
 
     // Device factory
-    public static Runnable makeDevice(String property, String location, final int frequencySeconds) {
+    public static Runnable makeDevice(EmulatorParameters parameters) {
         return new Runnable() {
             // each device establishes its own connection
             // as an enhancement we could start and stop them indepdently
@@ -54,14 +55,14 @@ public class TelemetryEmulator {
             public void run() {
                 try {
                    connectionFactory
-                            = new ActiveMQConnectionFactory("tcp://localhost:61616");
+                            = new ActiveMQConnectionFactory("tcp://activemq:61616");
                     Connection connection = connectionFactory.createConnection();
                     connection.start();
                     session = connection.createSession(false, Session.AUTO_ACKNOWLEDGE);
 
                     // in ActiceMQ this will create a topic if it doesn't exist
                     String topic = MessageFormat.format(
-                            "{0}.{1}.{2}", baseTopic, property, location);
+                            "{0}.{1}.{2}", baseTopic, parameters.getProperty(), parameters.getLocation());
                     destination = session.createTopic(topic);
 
                     // Create a MessageProducer from the Session to the Topic or Queue
@@ -80,7 +81,7 @@ public class TelemetryEmulator {
                         temperatureSkew %= 15;
 
                         // good citizen check
-                        int sleepFor =  frequencySeconds < 15 ? 15 : frequencySeconds;
+                        int sleepFor = Math.max(parameters.getFrequency(), 15);
                         TimeUnit.SECONDS.sleep(sleepFor);
                     }
 
