@@ -1,0 +1,45 @@
+version: "3.9"
+services:
+  activemq:
+    image: local_activemq
+    ports:
+      - "8161:8161"
+      - "61616:61616"
+  emulator-one:
+    build:
+      context: .
+      target: thermostat
+    depends_on:
+      - activemq
+      - javaserver
+    environment:
+      - PROPERTY=101
+      - LOCATION=Hall
+      - FREQUENCY=10
+  emulator-two:
+    build:
+      context: .
+      target: thermostat
+    depends_on:
+      - activemq
+      - javaserver
+    environment:
+      - PROPERTY=42
+      - LOCATION=Entrance
+      - FREQUENCY=5
+  webapp:
+    ports:
+      - "8080:80"
+    build:
+      context: .
+      target: webapp
+    depends_on:
+      - activemq
+  javaserver:
+    ports:
+      - "8085:8085"
+    build:
+      context: .
+      target: server
+    depends_on:
+      - activemq
