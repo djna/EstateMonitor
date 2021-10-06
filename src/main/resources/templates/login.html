@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>EstateMonitor | Login</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+
+        .login-box {
+            width: 280px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .login-box h1 {
+            float: left;
+            font-size: 40px;
+            border-bottom: 6px solid #b1b1b1;
+            margin-bottom: 50px;
+            padding: 13px 0;
+        }
+
+        .text-box {
+            width: 100%;
+            overflow: hidden;
+            font-size: 20px;
+            padding: 8px 0;
+            margin: 8px 0;
+            border-bottom: 1px solid #b1b1b1;
+        }
+
+        h1 {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        p {
+            font-family: 'Nunito', sans-serif;
+        }
+
+        .text-box {
+            font-family: 'Nunito', sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="login-box">
+        <h1>EstateMonitor</h1>
+        <form action="/authenticate" method="get">
+            <div class="text-box">
+                <input type="text" placeholder="Enter Username" name="username" required>
+            </div>
+
+            <div class="text-box">
+                <input type="password" placeholder="Enter Password" name="password" required>
+            </div>
+
+                <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
