@@ -2,6 +2,7 @@ package org.djna.asynch.estate.data;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class Users {
 
@@ -22,6 +23,8 @@ public class Users {
 
         return listOfUsers;
     }
+
+
 
 
 }
