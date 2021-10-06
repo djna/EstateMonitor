@@ -8,6 +8,7 @@ import org.djna.asynch.estate.data.ThermostatReading;
 
 import javax.jms.*;
 import java.text.MessageFormat;
+import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 // Emulates Telemetry from multiple devices.
@@ -101,9 +102,9 @@ public class TelemetryEmulator {
                 // String text = mapper.writeValueAsString(reading);
 
 
-                String text = "{\"date\":1633362327823,\"temperature\":"
+                String text = "{\"date\":" + System.currentTimeMillis() + "},\"temperature\":"
                         + temperature
-                        + ",\"location\":\"hall\"}";
+                        + ",\"location\":\"" + parameters.getLocation() + "\"}";
                 TextMessage message = session.createTextMessage(text);
 
                 System.out.println("Sent message to "

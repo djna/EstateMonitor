@@ -10,8 +10,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f73a2443-f264-4550-923e-990d93918df6" name="Changes" comment="setup pom">
+    <list default="true" id="f73a2443-f264-4550-923e-990d93918df6" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/djna/asynch/estate/data/Thermostat.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/djna/asynch/estate/data/Thermostat.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/djna/asynch/estate/data/ThermostatReading.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/djna/asynch/estate/data/ThermostatReading.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/djna/asynch/estate/emulator/TelemetryEmulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/djna/asynch/estate/emulator/TelemetryEmulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/djna/asynch/estate/webapp/HomeMonitorApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/djna/asynch/estate/webapp/HomeMonitorApplication.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +73,7 @@
     <property name="project.structure.last.edited" value="Artifacts" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="Docker" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -77,7 +82,7 @@
       <recent name="$PROJECT_DIR$/src/main" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.serve">
+  <component name="RunManager" selected="Spring Boot.HomeMonitorApplication">
     <configuration name="ServerBuild" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -137,7 +142,7 @@
     <configuration name="Dockerfile" type="docker-deploy" factoryName="dockerfile" temporary="true" server-name="Docker">
       <deployment type="dockerfile">
         <settings>
-          <option name="imageTag" value="thermostat" />
+          <option name="imageTag" value="estatemonitor" />
           <option name="buildOnly" value="true" />
           <option name="sourceFilePath" value="Dockerfile" />
         </settings>
@@ -197,10 +202,10 @@
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="npm.build" />
         <item itemvalue="Docker.Dockerfile server" />
         <item itemvalue="Docker.Dockerfile webserver" />
-        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="Docker.Dockerfile" />
       </list>
     </recent_temporary>

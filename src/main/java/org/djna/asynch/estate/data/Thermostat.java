@@ -1,14 +1,28 @@
 package org.djna.asynch.estate.data;
 
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.LinkedList;
+import java.util.List;
+
 public class Thermostat {
 
     private final String location;
-
-    private Integer temperature;
+    private Date lastUpdated;
+    private Integer currentTemperature;
+    private List<ThermostatReading> readingHistory = new LinkedList<>();
 
     public Thermostat(String initLocation) {
         location = initLocation;
-        temperature = 0;
+        currentTemperature = 0;
+    }
+
+    public Date getLastUpdated() {
+        return lastUpdated;
+    }
+
+    public void setLastUpdated(Date time) {
+        this.lastUpdated = time;
     }
 
     public String getLocation() {
@@ -16,11 +30,14 @@ public class Thermostat {
     }
 
     public Integer getTemperature() {
-        return temperature;
+        return currentTemperature;
     }
 
-    public void setTemperature(Integer temperature) {
-        this.temperature = temperature;
+    public void setTemperature(ThermostatReading t) {
+
+        this.currentTemperature = t.getTemperature();
+        readingHistory.add(t);
+
     }
 
 }
