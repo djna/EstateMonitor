@@ -1,7 +1,9 @@
 <template>
   <div class="home">
     <div v-show="this.$store.state.loggedIn === false">
-      <img alt="smart home" src="../assets/undraw_smart_home_re_orvn.svg" width="50%"/>
+      <div class="d-flex justify-center">
+        <img alt="smart home" src="../assets/undraw_smart_home_re_orvn.svg" />
+      </div>
       <v-row>
         <v-col>
           <v-form>
@@ -31,7 +33,7 @@
               </v-row>
 
               <v-row>
-                <v-col>
+                <v-col class="mr-4 d-flex justify-center">
                   <v-btn
                       class="mr-4"
                       @click="submit">
@@ -70,9 +72,8 @@
               </v-row>
 
               <v-row>
-                <v-col>
+                <v-col class="mr-4 d-flex justify-center">
                   <v-btn
-                      class="mr-4"
                       @click="submit">
                     Submit
                   </v-btn>

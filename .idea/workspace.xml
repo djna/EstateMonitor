@@ -28,7 +28,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="main" />
+        <entry key="$PROJECT_DIR$" value="websockets" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -77,7 +77,7 @@
       <recent name="$PROJECT_DIR$/src/main" />
     </key>
   </component>
-  <component name="RunManager" selected="Docker.docker-compose.yml: Compose Deployment">
+  <component name="RunManager" selected="npm.serve">
     <configuration name="ServerBuild" type="MavenRunConfiguration" factoryName="Maven">
       <MavenSettings>
         <option name="myGeneralSettings" />
@@ -197,11 +197,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
         <item itemvalue="npm.build" />
         <item itemvalue="Docker.Dockerfile server" />
-        <item itemvalue="Docker.Dockerfile" />
         <item itemvalue="Docker.Dockerfile webserver" />
+        <item itemvalue="Docker.docker-compose.yml: Compose Deployment" />
+        <item itemvalue="Docker.Dockerfile" />
       </list>
     </recent_temporary>
   </component>
@@ -215,7 +215,7 @@
       <updated>1633361611092</updated>
       <workItem from="1633429693511" duration="4335000" />
       <workItem from="1633437867942" duration="1917000" />
-      <workItem from="1633510524574" duration="2286000" />
+      <workItem from="1633510524574" duration="2867000" />
     </task>
     <task id="LOCAL-00001" summary="setup pom">
       <created>1633361803326</created>
