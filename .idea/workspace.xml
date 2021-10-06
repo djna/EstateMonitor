@@ -10,27 +10,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f73a2443-f264-4550-923e-990d93918df6" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/default.conf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/djna/asynch/estate/data/loginRequest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/EstateMonitor_jar.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_12_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_module_jackson_module_jaxb_annotations_2_12_4.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_activation_jakarta_activation_api_1_2_2.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_ws_rs_jakarta_ws_rs_api_2_1_6.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__jakarta_xml_bind_jakarta_xml_bind_api_2_3_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_external_jakarta_inject_2_6_1.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_hk2_osgi_resource_locator_1_0_3.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_core_jersey_common_2_33.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_ext_jersey_entity_filtering_2_33.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_glassfish_jersey_media_jersey_media_json_jackson_2_32.xml" beforeDir="false" />
+    <list default="true" id="f73a2443-f264-4550-923e-990d93918df6" name="Changes" comment="setup pom">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/djna/asynch/estate/webapp/HomeMonitorApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/djna/asynch/estate/webapp/HomeMonitorApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/djna/asynch/estate/webapp/HomeMonitorController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/djna/asynch/estate/webapp/HomeMonitorController.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -234,6 +215,7 @@
       <updated>1633361611092</updated>
       <workItem from="1633429693511" duration="4335000" />
       <workItem from="1633437867942" duration="1917000" />
+      <workItem from="1633510524574" duration="2286000" />
     </task>
     <task id="LOCAL-00001" summary="setup pom">
       <created>1633361803326</created>
