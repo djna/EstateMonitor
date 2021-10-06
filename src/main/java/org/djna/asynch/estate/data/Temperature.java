@@ -3,37 +3,40 @@ package org.djna.asynch.estate.data;
 import java.util.ArrayList;
 
 public class Temperature {
-    ArrayList<Integer> temperature = new ArrayList<>();
+    ArrayList<Integer> thermostatReadings = new ArrayList<>();
 
 
-    public Temperature() {
+    public static void main(String[] args) {
 
-        ArrayList<Integer> temperature= new ArrayList<>();
-        temperature.add(1);
-        temperature.add(10);
-        temperature.add(10);
-        temperature.add(10);
-        temperature.add(10);
-        temperature.add(10);
-        temperature.add(10);
-        temperature.add(10);
-        temperature.add(10);
-        temperature.add(10);
-        temperature.add(10);
-        temperature.add(30);
-
-
+        ArrayList<Integer> thermostatReadings= new ArrayList<>();
+        thermostatReadings.add(1);
+        thermostatReadings.add(10);
+        thermostatReadings.add(10);
+        thermostatReadings.add(17);
+        thermostatReadings.add(20);
+        thermostatReadings.add(13);
+        thermostatReadings.add(12);
+        thermostatReadings.add(30);
+        thermostatReadings.add(33);
+        thermostatReadings.add(15);
+        thermostatReadings.add(-15);
     }
 
-    public ArrayList<Integer> getTemperature() {
-        return temperature;
+    public ArrayList<Integer> getThermostatReadings() {
+        return thermostatReadings;
     }
 
+    public void setThermostatReadings(ArrayList<Integer> thermostatReadings) {
+        this.thermostatReadings = thermostatReadings;
+    }
 
-
+    @Override
+    public String toString() {
+        return "ThermostatArrayList{" +
+                "thermostatReadings=" + thermostatReadings +
+                '}';
+    }
 
 
 }
-
-
 
