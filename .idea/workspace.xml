@@ -65,7 +65,7 @@
       <recent name="$PROJECT_DIR$/src/main" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.HomeMonitorApplication">
+  <component name="RunManager" selected="Application.HomeMonitorApplication">
     <configuration name="HomeMonitorApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="org.djna.asynch.estate.webapp.HomeMonitorApplication" />
       <module name="EstateMonitor" />
@@ -120,10 +120,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Spring Boot.HomeMonitorApplication" />
         <item itemvalue="Application.TelemetryEmulator" />
         <item itemvalue="Application.HomeMonitorApplication" />
-        <item itemvalue="Application.EstateMonitor" />
       </list>
     </recent_temporary>
   </component>
