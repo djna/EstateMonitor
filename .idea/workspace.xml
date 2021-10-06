@@ -5,11 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f73a2443-f264-4550-923e-990d93918df6" name="Changes" comment="setup pom">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/djna/asynch/estate/data/Temperature.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/djna/asynch/estate/data/House.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/djna/asynch/estate/data/HouseList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/EstateMonitor.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/djna/asynch/estate/emulator/TelemetryEmulator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/djna/asynch/estate/emulator/TelemetryEmulator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/djna/asynch/estate/data/Temperature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/djna/asynch/estate/data/Temperature.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -19,6 +19,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
