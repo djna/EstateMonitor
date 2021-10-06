@@ -1,48 +1,88 @@
 <template>
   <div class="home">
     <div v-show="this.$store.state.loggedIn === false">
-      <img alt="Vue logo" src="../assets/logo.png">
-      <v-form>
-        <v-container>
-          <v-row>
-            <v-col
-                cols="12"
-                md="4"
-            >
-              <v-text-field
-                  v-model="username"
-                  label="Username"
-                  required
-              ></v-text-field>
-            </v-col>
+      <div class="d-flex justify-center">
+        <img alt="smart home" src="../assets/undraw_smart_home_re_orvn.svg" />
+      </div>
+      <v-row>
+        <v-col>
+          <v-form>
+            <v-container>
+              <h1>Log In</h1>
+              <v-row>
+                <v-col>
+                  <v-text-field
+                      v-model="username"
+                      label="Username"
+                      required
+                  ></v-text-field>
+                </v-col>
+              </v-row>
 
-            <v-col
-                cols="12"
-                md="4"
-            >
-              <v-text-field
-                  v-model="password"
-                  :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'"
-                  :type="show ? 'text' : 'password'"
-                  @click:append="show = !show"
-                  label="Password"
-                  required
-              ></v-text-field>
-            </v-col>
+              <v-row>
+                <v-col>
+                  <v-text-field
+                      v-model="password"
+                      :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'"
+                      :type="show ? 'text' : 'password'"
+                      @click:append="show = !show"
+                      label="Password"
+                      required
+                  ></v-text-field>
+                </v-col>
+              </v-row>
 
-            <v-col
-                cols="12"
-                md="4"
-            >
-              <v-btn
-                  class="mr-4"
-                  @click="submit">
-                Submit
-              </v-btn>
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-form>
+              <v-row>
+                <v-col class="mr-4 d-flex justify-center">
+                  <v-btn
+                      class="mr-4"
+                      @click="submit">
+                    Submit
+                  </v-btn>
+                </v-col>
+              </v-row>
+            </v-container>
+          </v-form>
+        </v-col>
+        <v-col>
+          <v-form>
+            <v-container>
+              <h1>Sign Up</h1>
+              <v-row>
+                <v-col>
+                  <v-text-field
+                      v-model="username"
+                      label="Username"
+                      required
+                  ></v-text-field>
+                </v-col>
+              </v-row>
+
+              <v-row>
+                <v-col>
+                  <v-text-field
+                      v-model="password"
+                      :append-icon="show ? 'mdi-eye' : 'mdi-eye-off'"
+                      :type="show ? 'text' : 'password'"
+                      @click:append="show = !show"
+                      label="Password"
+                      required
+                  ></v-text-field>
+                </v-col>
+              </v-row>
+
+              <v-row>
+                <v-col class="mr-4 d-flex justify-center">
+                  <v-btn
+                      @click="submit">
+                    Submit
+                  </v-btn>
+                </v-col>
+              </v-row>
+            </v-container>
+          </v-form>
+        </v-col>
+      </v-row>
     </div>
     <div v-show="this.$store.state.loggedIn === true">
       <h1>Youve been logged in</h1>
@@ -79,3 +119,9 @@ export default {
   }
 }
 </script>
+
+<style>
+img {
+  height: 15em;
+}
+</style>
