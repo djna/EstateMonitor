@@ -4,4 +4,5 @@ import java.util.Date;
 
 public class ThermostatReading {
     // add data such temperature here
+
 }
